@@ -1,0 +1,13 @@
+
+curl -H "Content-Type: application/json" -X POST -d "{\"name\": \"checking\", \"balance\": 500}" "http://localhost:3000/account"
+
+curl -H "Content-Type: application/json" -X POST -d "{\"name\": \"savings\", \"balance\": 1000}" "http://localhost:3000/account"
+
+curl "http://localhost:3000/accounts"
+
+curl -H "Content-Type: application/json" -X PUT  -d "{\"name\": \"checking\", \"balance\": 600}" "http://localhost:3000/account"
+
+curl "http://localhost:3000/account/name=checking"
+
+
+curl -X DELETE "http://localhost:3000/account?name=checking"
